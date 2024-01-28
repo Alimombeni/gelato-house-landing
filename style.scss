@@ -1,0 +1,653 @@
+
+
+$lightBlue : rgb(0, 179, 196);
+$textDarkGray : #969696;
+$bg_White: #ffff;
+$bg_lightGray:#d8d8d8;
+$redColor : #bb0202;
+$greenColor:rgb(42, 187, 42);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: vazirmatn;
+}
+body{
+
+    background-color: #f9fafc;
+}
+
+// -----------------------------------> HEADER 
+.header{
+    background-color: $bg_White;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid $textDarkGray;
+
+    &_logo img{
+        width: 80px;
+        height: auto;
+        display: flex;
+        margin-right: 100px;
+    }
+    &_details{
+        margin-left: 100px;
+        display: flex;
+        align-items: center;
+        color: $textDarkGray;
+        
+    }
+    &_details_text{
+        display: flex;
+        padding: 0 20px;
+        color: $textDarkGray;
+        font-size: 18px;
+    }
+   .order_text:hover{
+        cursor: pointer;
+        color: $lightBlue;
+       
+    }.site_roules:hover{
+        cursor: pointer;
+        color: $lightBlue;
+    }
+    p{
+        margin-left: 20px;
+    }
+    .btn{
+        font-family: vazirmatn;
+        background-color: transparent;
+        border-radius: 5px;
+        border: 1px solid $lightBlue;        
+        color: $textDarkGray;
+        padding: 8px 15px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all ease 0.2s;
+        &:hover{
+            background-color: $lightBlue;
+            color: $bg_White;
+        } 
+        
+    }.btn i{
+        color: $textDarkGray;
+        margin-left: 8px;
+        font-size: 25px;
+    }
+     
+}.mobies{
+    opacity: 0; 
+      }
+
+// header   media query -- mobile screen
+@media screen and (max-width:775px){
+    .order_text{
+        display: none;
+    }
+    .site_roules{
+        display: none;
+    }
+  
+}
+@media screen and (max-width:550px){
+    .order_text{
+        display: none;
+    }
+    .site_roules{
+        display: none;
+    }
+   .btn{
+    display: none;
+
+   }.btn i{
+    display: none;
+   }.menu-icon-small{
+    font-size: 9px;
+   }
+   .btn{
+    padding: 3px 6px;
+   }
+   .mobies{
+    font-size: 50px;
+    color: $textDarkGray;
+    opacity: 1;
+    margin-right: 60px;
+
+}
+
+}
+
+ //----------------------------------->  MAIN 
+ @media screen and (max-width:375px) {
+    .main_order button{
+       display: none;
+    }
+ }
+.main_img{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+}
+.main_img img{
+    width: 90%;
+    object-fit: contain;
+    margin-top: 20px;
+}
+
+.main_cards{
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &_order{
+    display: flex;
+    flex-direction: column;
+
+    }
+
+ 
+    button{
+        background: transparent;
+        border-radius: 5px;
+        font-size: 18px;
+        padding: 10px 15px;
+        border: 1px solid  $lightBlue;
+        cursor: pointer;
+        margin-top: 15px;
+        font-family:vazirmatn;
+    }   
+   
+
+    .main_order_on{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+
+.green {
+    margin-left: 10px;
+    background-color: $greenColor;
+   
+    -webkit-animation: up-right 1s infinite;
+    -moz-animation: up-right 1s infinite;
+    -o-animation: up-right 1s infinite;
+    animation: up-right 1s infinite;
+}
+
+
+&_alarm{
+        width: 20px;
+        height: 20px;
+        color: $greenColor;
+        border-radius: 50%;
+    }
+    @keyframes up-right {
+        0% {
+            transform: scale(1);
+            opacity: .25
+        }
+        50% {
+            transform: scale (1);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(1);
+            opacity: .25;
+        }
+    }
+    .circle {
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+        opacity: .25;
+   
+    }
+}   
+.card{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5px 15px;
+    border: 1px solid $bg_lightGray;
+    border-radius: 5px;
+    width: 200px;
+    background-color:$bg_White;
+
+&_delivery{
+        display: flex;
+        flex-direction: column;
+        color: $greenColor;
+    }
+    &_av{
+        color:$textDarkGray;
+        display: flex;
+    }.space{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &_title_text{
+    font-size: 14px;
+    display: flex;
+    color:$textDarkGray;
+    flex-direction: column;
+}
+&_title_text p{
+    margin-top: 10px;
+}
+&_title_time{
+    font-size: 14px;
+    color:$textDarkGray;
+    display: flex;
+    flex-direction: column;
+}
+&_title_time p{
+    margin-top: 10px;
+}
+}
+.order_menu{
+    width: 100%;
+    display: flex;
+    direction: rtl;
+    position: relative;
+    z-index: 2222;
+    top: 0;
+    a{
+        color: $textDarkGray;
+        text-decoration: none;       
+    }
+}
+//----------------------------->  NAVIGATION
+@media screen and (max-width:800px) {
+    .navigation_menu{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+       .input_field{
+       visibility: hidden;
+    }
+}
+.navigation_menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px dashed $bg_lightGray;
+    padding: 10px;
+    }
+    .menu_right_icon{
+        margin-top: 10px;
+        margin-left: 5px;
+        font-size: 20px;
+        color: $textDarkGray;
+    }
+    .menu_chevron_right{
+        margin-top: 10px;
+        cursor: pointer;
+        color: $bg_lightGray;
+    }
+    .menu_chevron_left{
+        margin-top: 10px;
+        cursor: pointer;
+         color: $bg_lightGray;
+    }
+    .navigation_menu_items{
+        display: flex;
+        padding: 5px;
+        width: 100%;
+    }
+    .navigation_menu_items ul{
+        list-style: none;    
+    }
+    .navigation_menu_items a{
+        color: $textDarkGray;
+    }
+    .navigation_menu_items li{
+        background-color: $textDarkGray;
+        border-radius: 5px;
+        padding: 0 5px;
+        color: $bg_White;
+        display: inline-block;
+    }
+    .search_bar i{
+        position: absolute; 
+        color: $textDarkGray;
+        padding: 10px;
+    }
+    .search_bar{
+    width: 30%;
+    }
+    .input_field{
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        border-radius: 5px;
+        border-style: none;
+        border:1px solid $bg_lightGray;
+    }
+//=====================products
+
+
+
+    // ****************************************************************************************
+    .nav_container{
+        width: 70%;
+        margin-right: 50px;
+        height: 100%;
+        padding: 20px;
+        margin-right: 60px;
+        background-color:$bg_White;
+        border: 1px solid $bg_lightGray;
+
+       
+        
+.navigation{
+    background-color: $bg_White;
+    z-index: 9999999;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    position: sticky;
+    padding: 10px;
+    top: 0;
+    border-bottom: 1px solid $bg_lightGray;
+    margin-top: 40px;
+ }
+@media screen and (max-width:375) {
+  
+   
+}
+ 
+
+.navigation a{
+    text-decoration: none;
+    color: $bg_lightGray;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    
+}
+.navigation strong{
+    display: flex;
+
+}
+.nav_chevron_right{
+    margin-top: 10px;
+    cursor: pointer;
+font-size: 25px;
+color: $bg_lightGray;
+}
+.nav_chevron_left{
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 25px;
+    color: $bg_lightGray;
+}
+
+ .icon_one{
+     width: 40px;
+     height: 40px;
+     display: inline-block;
+     vertical-align: middle;
+     background-size: 40px 40px;
+     margin-bottom: 10px;
+     background-image: url(/gelato/icons/3.png);
+ }
+ 
+ .icon_two{
+     width: 40px;
+     height: 40px;
+     display: inline-block;
+     vertical-align: middle;
+     background-size: 40px 40px;
+     margin-bottom: 10px;
+     background-image: url(/gelato/icons/6.png);
+ }
+ .icon_three{
+     width: 40px;
+     height: 40px;
+     display: inline-block;
+     vertical-align: middle;
+     background-size: 40px 40px;
+     margin-bottom: 10px;
+     background-image: url(/gelato/icons/5.png);
+ 
+ }
+ .icon_four{
+     width: 40px;
+     height: 40px;
+     display: inline-block;
+     vertical-align: middle;
+     background-size: 40px 40px;
+     margin-bottom: 10px;
+     background-image: url(/gelato/icons/2.png);
+ 
+ }
+ .icon_five{
+     width: 40px;
+     height: 40px;
+     display: inline-block;
+     vertical-align: middle;
+     background-size: 40px 40px;
+     margin-bottom: 10px;
+     background-image: url(/gelato/icons/1.png);
+ }
+ 
+
+
+
+}
+// ***************************************************************************
+//----------------------------> PRODUCTS item
+.product_items{
+    display: flex;
+    background-color: $bg_White;
+    justify-content: right;
+    flex-direction: column;
+}
+.cards_align_items{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.bascket_shoping{
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    direction: ltr;
+    margin-left: 50px;
+}
+.shoping_align{
+   position: absolute;
+    left: 0;
+    padding: 10px;
+   
+   
+    
+}
+    .shoping_card{
+        background-color: $bg_White;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 10px;
+        height: 250px;
+        width: 250px;
+        border: 1px solid $bg_lightGray;
+        border-radius: 5px;
+    
+    }
+    .shoping_card_header{
+        border-bottom: 1px solid $bg_lightGray;
+        margin-bottom: 10px;
+        color: $textDarkGray;
+    }
+.shoping_card_header h3{
+    direction: rtl;
+    margin-bottom: 10px;
+}
+    .shoping_card_main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+        
+        color:$bg_lightGray;
+    }
+    .shoping_card_main i{
+        font-size: 100px;
+    }
+    .shoping_card_main span{
+
+        font-size: 20px;
+    }
+    
+.product_items{
+    display: flex;
+    
+    justify-content: space-evenly;
+
+}
+
+.special_items_title{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    padding: 15px;
+
+}
+.special_items_title h1{
+    color: $textDarkGray;
+}
+.special_items_title i{
+    color: $textDarkGray; 
+    font-size: 25px;
+     margin-top: 5px;
+      margin-right: 5px;
+    }
+
+@media screen and (max-width: 1240px){
+   
+    .bascket_shoping{
+        visibility: hidden;
+    }
+
+}
+
+// ------------------------> CARD - PRODUCTION
+
+.card_container{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 280px;
+    border: 1px solid $textDarkGray;
+    border-radius: 5px;
+    margin-top: 50px;
+    
+    }
+    .card_header img{
+    width: 100%;
+    object-fit: contain;
+    }
+    .card_header{
+        transition: all ease-in 0.1s;
+        
+    }
+    .card_header:hover{
+        opacity: 0.5;
+    }
+   
+    .card_footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    
+    }
+    .card_footer_title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+ 
+    }
+
+.icone_cloud{
+color:$lightBlue;
+font-size: 30px;
+position: relative;
+cursor: pointer;
+}
+.incress{
+color: $bg_White;
+position: absolute;
+left: 0;
+top: 0;
+}
+
+
+
+
+//--------------------------------> FOOTER
+.footer_page{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-top: 100px;
+    border-top: 1px solid $bg_lightGray;
+    border-bottom: 1px solid $bg_lightGray;
+    }.footer_title{
+    margin-right: 30px;
+    color: $textDarkGray;
+    }
+    
+    .footer_title span{
+    color: $lightBlue;
+    cursor: pointer;
+    }
+    .footer_socialmedia {
+        margin-left: 30px;
+        cursor: pointer;
+        color: $lightBlue;
+        padding: 5px;
+        font-size: 30px;
+        
+    }
+    .author{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 50px;
+    
+        
+    }.author_element{
+        font-size: 16px;
+        color: $textDarkGray;
+        padding: 20px;
+    }.author_element span{
+        color: $redColor;
+    }
+    .author_element p {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+
+
+
